@@ -58,7 +58,19 @@ string Engine::getNotes(){
 	return notes;
 }
 
+void Engine::overrideID(int id){
+	this->id = id;
+}
 
+void Engine::overrideDate(string date){
+	this->date = date;
+}
 
+void Engine::setModel(string model){
+	this-> model = model;
+}
 
+void Engine::setSerial(int serial){
+	this->serial = serial;
+}
 
