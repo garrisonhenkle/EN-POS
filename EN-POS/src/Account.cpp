@@ -20,29 +20,27 @@ Account::Account() {
 	engines = nullptr;
 } //end default constructor Account()
 
-Account::Account(string first, string last, string address, string city,
-		string state, string email, string provider, int phone) {
-	this->first = first;
-	this->last = last;
-	this->address = address;
-	this->city = city;
-	this->state = state;
-	this->email = email;
-	this->provider = provider;
-	this->phone = phone;
-	this->screens = screens;
-	this->engines = engines;
+Account::Account(string firstName, string lastName, string mailingAddress,
+		string cityName, string stateCode, string emailAddress,
+		string serviceProvider, int phoneNumber) {
+	first = firstName;
+	last = lastName;
+	address = mailingAddress;
+	city = cityName;
+	state = stateCode;
+	email = emailAddress;
+	provider = serviceProvider;
+	phone = phoneNumber;
 }
 
 Account::~Account() {
+	screens.clear();
+	engines.clear();
 } //end deconstructor ~Account()
-
-
-
 
 /*
  * All getters and setters are below
-*/
+ */
 
 string Account::getFirst() {
 	return first;
@@ -94,4 +92,8 @@ void Account::setState(string state) {
 
 void Account::setProv(string provider) {
 	this->provider = provider;
+}
+
+void Account::setPhone(int phone) {
+	this->phone = phone;
 }

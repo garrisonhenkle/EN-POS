@@ -17,9 +17,15 @@ using namespace std;
 
 class Account {
 public:
+
 	Account();
 	Account(string, string, string, string, string, string, string, int);
 	virtual ~Account();
+
+	void addEngine();
+	void removeEngine();
+	void addScreen();
+	void removeScreen();
 
 	string getFirst();
 	string getLast();
